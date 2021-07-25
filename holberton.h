@@ -1,9 +1,6 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
-int _putchar(char);
-int _printf(const char *format, ...);
-
 #include <stdarg.h>
 /**
  * struct print - print type and print function
@@ -15,5 +12,9 @@ typedef struct print
 	char *char_to_compare;
 	int (*f)(va_list);
 } print_f;
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+int print_c(va_list c);
 
 #endif
