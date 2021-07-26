@@ -9,6 +9,7 @@
  */
 int main(void)
 {
-    _printf("ccc", 'H', 'g', 'q');
-    return (0);
+	char g = 'G';
+	_printf("hola%c%c%c", g, 'H', 'm');
+	return (0);
 }
