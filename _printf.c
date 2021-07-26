@@ -20,21 +20,28 @@ int _printf(const char *format, ...)
 	va_start(type_data, format);
 	i = 0;
 	while (format && format[i])
-	{
+	{   
 		j = 0;
-		while (options[j].char_to_compare)
+		if (format[i] == '%')
 		{
-			if (*(options[j].char_to_compare) == format[i])
+			while (options[j].char_to_compare)
 			{
-				options[j].f(type_data);
-				break;
+				if (format[i + 1] == *(options[j].char_to_compare))
+				{
+					options[j].f(type_data);
+					break;
+				}
+				j++;
 			}
-			j++;
+			i+=2;
 		}
-		i++;
+		else
+		{
+			_putchar(format[i]);
+			i++;
+		}
 	}
-	printf("\n");
+	_putchar('\n');
 	va_end(type_data);
-
     return (0);
 }
