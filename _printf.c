@@ -11,6 +11,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i, j;
+	int length = 0;
 	print_f options[] = {
 		{"c", print_c},
 		{NULL, NULL}
@@ -40,8 +41,9 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			i++;
 		}
+		length++;
 	}
 	_putchar('\n');
 	va_end(type_data);
-    return (0);
+    return (length);
 }
