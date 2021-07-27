@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == *(options[j].char_to_compare))
 				{
-					options[j].f(type_data);
+					length += options[j].f(type_data);
 					break;
 				}
 				j++;
@@ -42,8 +42,8 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 			i++;
+			length++;
 		}
-		length++;
 	}
 	_putchar('\n');
 	va_end(type_data);
