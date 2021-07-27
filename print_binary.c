@@ -5,7 +5,7 @@
 * print_binary - The unsigned int argument is converted to binary
 * @b: argument variadic function
 *
-* Return:
+* Return: stored values
 */
 
 int print_binary(va_list b)
@@ -16,7 +16,7 @@ int print_binary(va_list b)
 	int bin[1000];
 
 	n = va_arg(b, int);
-	if(n == 0)
+	if (n == 0)
 	{
 		_putchar('0');
 		j++;
@@ -31,7 +31,7 @@ int print_binary(va_list b)
 			i++;
 		}
 		i = i - 1;
-		while(i >= 0)
+		while (i >= 0)
 		{
 			_putchar(bin[i] + '0');
 			i--;
