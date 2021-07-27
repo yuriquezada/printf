@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	int length = 0;
 	print_f options[] = {
 		{"c", print_c},
+		{"s", print_s},
 		{NULL, NULL}
 	};
 	va_list type_data;
