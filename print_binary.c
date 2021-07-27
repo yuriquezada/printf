@@ -24,11 +24,7 @@ int print_binary(va_list b)
 	else
 	{
 		i = 0;
-<<<<<<< HEAD
-		while (n >= 0)
-=======
 		while (n > 0)
->>>>>>> task3
 		{
 			bin[i] = n % 2;
 			n = n / 2;
@@ -43,8 +39,4 @@ int print_binary(va_list b)
 		}
 	}
 	return (j - 2);
-<<<<<<< HEAD
-	}
-=======
-	}
->>>>>>> task3
+}
