@@ -24,7 +24,7 @@ int print_binary(va_list b)
 	else
 	{
 		i = 0;
-		while (n >= 0)
+		while (n > 0)
 		{
 			bin[i] = n % 2;
 			n = n / 2;

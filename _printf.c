@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 	print_f options[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"b", print_binary},
 		{NULL, NULL}
 	};
 	va_list type_data;
@@ -22,7 +23,7 @@ int _printf(const char *format, ...)
 	va_start(type_data, format);
 	i = 0;
 	while (format && format[i])
-	{   
+	{
 		j = 0;
 		if (format[i] == '%')
 		{
