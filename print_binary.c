@@ -13,7 +13,7 @@ int print_binary(va_list b)
 
 	int i, j = 0;
 	unsigned int n;
-	int bin[1000];
+	unsigned int bin[1000];
 
 	n = va_arg(b, int);
 	if (n == 0)
