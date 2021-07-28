@@ -24,11 +24,11 @@ int _printf(const char *format, ...)
 		return (-1);
 	va_start(type_data, format);
 	i = 0;
-	if (!format[i])
-		return (length);
 	while (format[i])
 	{
 		j = 0;
+		if (!format[i])
+			return (length);
 		if (format[i] == '%')
 		{
 			while (options[j].char_to_compare)
