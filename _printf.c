@@ -15,7 +15,6 @@ int _printf(const char *format, ...)
 	print_f options[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_percentage},
 		{"b", print_binary},
 		{"d", print_d},
 		{"i", print_i},
