@@ -28,7 +28,12 @@ int _printf(const char *format, ...)
 	{
 		if (!format[i])
 			return (length);
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == '%')
+		{	
+			_putchar(format[i]);
+			length++;
+		}
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			j = 0;
 			while (options[j].char_to_compare)
