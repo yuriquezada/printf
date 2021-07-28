@@ -26,11 +26,11 @@ int _printf(const char *format, ...)
 	i = 0;
 	while (format[i])
 	{
-		j = 0;
 		if (!format[i])
 			return (length);
 		if (format[i] == '%')
 		{
+			j = 0;
 			while (options[j].char_to_compare)
 			{
 				if (format[i + 1] == *(options[j].char_to_compare))
