@@ -1,0 +1,16 @@
+#include "holberton.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * print_percentage - print a string
+ * @s: string to print
+ *
+ * Return: i
+ */
+int print_percentage(va_list %)
+{
+	_putchar('%');
+	return (1);
+}
