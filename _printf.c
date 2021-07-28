@@ -20,11 +20,11 @@ int _printf(const char *format, ...)
 		{"i", print_i},
 		{NULL, NULL}
 	};
-	va_list type_data;
+	va_list arg;
 
 	if (!format)
 		return (-1);
-	va_start(type_data, format);
+	va_start(arg, format);
 	i = 0;
 	while (format[i])
 	{
@@ -37,11 +37,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			j = 0;
-			while (options[j].char_to_compare)
+			while (options[j].c)
 			{
-				if (format[i + 1] == *(options[j].char_to_compare))
+				if (format[i + 1] == *(options[j].c))
 				{
-					length += options[j].f(type_data);
+					length += options[j].f(arg);
 					break;
 				}
 				j++;
@@ -56,6 +56,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	_putchar('\n');
-	va_end(type_data);
+	va_end(arg);
 	return (length);
 }
