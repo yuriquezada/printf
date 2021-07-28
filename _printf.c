@@ -6,7 +6,7 @@
  * _prinf - print anything
  * @format: string containing the data types
  *
- * Return: void
+ * Return: length
  */
 int _printf(const char *format, ...)
 {
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 		if (!format[i])
 			return (length);
 		if (format[i] == '%' && format[i + 1] == '%')
-		{	
+		{
 			_putchar(format[i]);
 			length++;
 		}
@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			i+=2;
+			i += 2;
 		}
 		else
 		{
@@ -58,5 +58,5 @@ int _printf(const char *format, ...)
 	}
 	_putchar('\n');
 	va_end(type_data);
-    return (length);
+	return (length);
 }
