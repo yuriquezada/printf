@@ -27,15 +27,17 @@ int _printf(const char *format, ...)
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 	va_start(arg, format);
-	i = 0;
-	while (format[i])
+	for (i = 0; format[i]; i++)
 	{
 		if (!format[i])
 			return (length);
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
+			putchar(format[i]);
+			i++;
 			length++;
-		}
+			continue;
+        	}
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			j = 0;
@@ -48,12 +50,11 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			i += 2;
+			i++;
 		}
 		else
 		{
-			_putchar(format[i]);
-			i++;
+			putchar(format[i]);
 			length++;
 		}
 	}
