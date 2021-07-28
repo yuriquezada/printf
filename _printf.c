@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			return (length);
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			i++;
 			length++;
         	}
@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			length++;
 		}
 	}
