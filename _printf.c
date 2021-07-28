@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 		{"c", print_c},
 		{"s", print_s},
 		{"b", print_binary},
+		{"i", print_i},
 		{NULL, NULL}
 	};
 	va_list type_data;
