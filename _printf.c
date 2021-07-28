@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			i++;
 			length++;
+			continue;
         	}
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
