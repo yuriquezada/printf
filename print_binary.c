@@ -15,7 +15,7 @@ int print_binary(va_list b)
 	unsigned int n;
 	unsigned int bin[1000];
 
-	n = va_arg(b, int);
+	n = va_arg(b, unsigned int);
 	if (n == 0)
 	{
 		_putchar('0');
