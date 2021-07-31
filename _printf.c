@@ -32,7 +32,7 @@ int (*get_option(const char *format))(va_list)
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, j;
+	unsigned int i;
 	int length = 0;
 
 	va_list arg;
