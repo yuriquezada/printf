@@ -1,7 +1,7 @@
 # project 0x11. C - printf ✏️
-***
+
 ## _printf()
-***
+
 ### **Prototype: `int _printf(const char *format, ...);`**
 
 ### _printf.c
@@ -43,11 +43,11 @@ FORMAT generates a specific format relative to the input of the specifier.
 | `-` | Justify left |
 
 ## Description
-***
+
 This is a Holberton School Bootcamp study project, where we created our own "Printf" and implemented it from our `holberton.h` library to develop different tests as if we were using the original printf from the C library.
 
 ## Requirements
-***
+
 * Allowed editors: `vi`, `vim`, `emacs`
 * All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 * All your files should end with a new line
@@ -62,7 +62,7 @@ This is a Holberton School Bootcamp study project, where we created our own "Pri
 * Note that we will not provide the `_putchar` function for this project
 
 ## Some examples
-***
+
 ```C
 #include <limits.h>
 #include <stdio.h>
@@ -97,7 +97,7 @@ Percent:[%]
 ```
 
 ## More files
-***
+
 * _putchar
  
 Writes a character to stdout.
@@ -131,7 +131,7 @@ Function to print a string
 man page containing details about the usage of _printf function.
 
 ## Authors ✒️
-***
+
 Yuri Quezada - [yuriquezada](https://github.com/yuriquezada)
 
 Geraldine Meneses - [nitaly31](https://github.com/nitaly31)
