@@ -40,15 +40,13 @@ int _printf(const char *format, ...)
         	}
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j = 0;
-			while (options[j].c)
+			for (j = 0; options[j].c; j++)
 			{
 				if (format[i + 1] == *(options[j].c))
 				{
 					length += options[j].f(arg);
 					break;
 				}
-				j++;
 			}
 			i++;
 		}
