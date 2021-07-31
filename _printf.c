@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			i++;
 			length++;
 			continue;
-        	}
+		}
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			f = get_option(&format[i + 1]);
@@ -39,10 +39,11 @@ int _printf(const char *format, ...)
 				length += f(arg);
 				i++;
 				continue;
-			}			
+			}
 		}
 		if (format[i] == '%' && format[i + 1] == 'K')
 		{
+			putchar('%');
 			putchar('K');
 			i++;
 		}
