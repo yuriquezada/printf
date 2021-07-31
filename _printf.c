@@ -41,6 +41,11 @@ int _printf(const char *format, ...)
 				continue;
 			}			
 		}
+		if (format[i] == '%' && format[i + 1] == 'K')
+		{
+			putchar('K');
+			i++;
+		}
 		else
 		{
 			_putchar(format[i]);
