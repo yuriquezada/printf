@@ -47,6 +47,8 @@ int _printf(const char *format, ...)
 					length += options[j].f(arg);
 					break;
 				}
+				else
+					return (-1);
 			}
 			i++;
 		}
