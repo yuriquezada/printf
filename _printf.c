@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 			continue;
         	}
 		f = get_option(&format[i + 1]);
-		if (f != NULL)
+		if (f)
 		{
 			length += f(arg);
 			i++;
