@@ -49,7 +49,11 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '!')
+		{
+			_putchar(format[i]);
+			_putchar(format[i + 1]);
 			return (-1);
+		}
 		else
 		{
 			_putchar(format[i]);
