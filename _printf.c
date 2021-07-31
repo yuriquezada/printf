@@ -49,7 +49,6 @@ int _printf(const char *format, ...)
 				}
 			}
 			i++;
-			return (-1);
 		}
 		else
 		{
