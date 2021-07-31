@@ -3,15 +3,14 @@
 #include <stdio.h>
 
 /**
- * _prinf - print anything
- * @format: string containing the data types
+ * get_option - Get the function based on the input value
+ * @format: string that contains what we will print
  *
- * Return: length
+ * Return: corresponding pointer to function or NULL
  */
-int _printf(const char *format, ...)
+int (*get_option(const char *format))(va_list)
 {
-	unsigned int i, j;
-	int length = 0;
+	unsigned int i;
 	print_f options[] = {
 		{"c", print_c},
 		{"s", print_s},
@@ -20,7 +19,24 @@ int _printf(const char *format, ...)
 		{"i", print_i},
 		{NULL, NULL}
 	};
+	for (i = 0; options[i].c != NULL; i++)
+		if (*options[i].c == *format)
+			break;
+	return (options[i].f);
+}
+/**
+ * _prinf - print anything
+ * @format: string that contains what we will print
+ *
+ * Return: length
+ */
+int _printf(const char *format, ...)
+{
+	unsigned int i, j;
+	int length = 0;
+
 	va_list arg;
+	int (*f)(va_list);
 
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -38,21 +54,11 @@ int _printf(const char *format, ...)
 			length++;
 			continue;
         	}
-		if (format[i] == '%' && format[i + 1] != '%')
+		f = get_option(&format[i + 1]);
+		if (f != NULL)
 		{
-			for (j = 0; options[j].c; j++)
-				if (format[i + 1] == *(options[j].c))
-				{
-					length += options[j].f(arg);
-					break;
-				}
+			length += f(arg);
 			i++;
-		}
-		else if (format[i] == '%' && format[i + 1] == '!')
-		{
-			_putchar(format[i]);
-			_putchar(format[i + 1]);
-			return (-1);
 		}
 		else
 		{
