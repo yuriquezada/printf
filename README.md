@@ -32,6 +32,16 @@ FORMAT generates a specific format relative to the input of the specifier.
 | `r` | Print the inverted string |
 | `R` | replaces a letter with the thirteenth letter of the alphabet (ROT13) |
 
+### Flag char
+
+| Character | Output |
+| --- | --- |
+| `+` | Print the '+' symbol in front of the positive number occupying one space wide. |
+| `space` | Invisible plus sign. A blank space is left before the number occupying a space in the width |
+| `#` | Prepend a print of a zero '0' over an octal number |
+| `0` | Fill in zero to the left |
+| `-` | Justify left |
+
 ## Description
 ***
 This is a Holberton School Bootcamp study project, where we created our own "Printf" and implemented it from our `holberton.h` library to develop different tests as if we were using the original printf from the C library.
