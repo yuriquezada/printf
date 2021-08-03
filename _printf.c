@@ -4,23 +4,16 @@
 
 /**
  * _prinf - print anything
- * @format: string containing the data types
+ * @format: string that contains what we will print
  *
  * Return: length
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, j;
+	unsigned int i;
 	int length = 0;
-	print_f options[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"b", print_binary},
-		{"d", print_d},
-		{"i", print_i},
-		{NULL, NULL}
-	};
 	va_list arg;
+	int (*f)(va_list);
 
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -37,19 +30,21 @@ int _printf(const char *format, ...)
 			i++;
 			length++;
 			continue;
-        	}
+		}
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j = 0;
-			while (options[j].c)
+			f = get_option(&format[i + 1]);
+			if (f != NULL)
 			{
-				if (format[i + 1] == *(options[j].c))
-				{
-					length += options[j].f(arg);
-					break;
-				}
-				j++;
+				length += f(arg);
+				i++;
+				continue;
 			}
+		}
+		if (format[i] == '%' && format[i + 1] == 'K')
+		{
+			putchar('%');
+			putchar('K');
 			i++;
 		}
 		else

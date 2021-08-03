@@ -1,6 +1,6 @@
 . \ "This is the Holberton student manual page
 . \ "Just because it's printed doesn't mean it's the gospel
-.TH man 3 "23 jul 2021" "Holberton School 0x11. C - _printf"
+.TH man 3 "23 Jul 2021" "Holberton School 0x11. C - _printf"
 
 .SH NAME
 _printf (): Take the input to make formatted prints.
