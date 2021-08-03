@@ -19,7 +19,7 @@ FORMAT generates a specific format relative to the input of the specifier.
 The _printf () function returns the number of characters printed (excluding the null byte used to finalize the output to strings).
 
 .B% c
-Print a character passed as a parameter
+Print a character passed as a parameter.
 
 .B% s
 Prints a string of characters terminated with a null.
