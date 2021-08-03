@@ -18,49 +18,49 @@ FORMAT generates a specific format relative to the input of the specifier.
 .SH Return value
 The _printf () function returns the number of characters printed (excluding the null byte used to finalize the output to strings).
 
-.B% c
+.B %c
 Print a character passed as a parameter.
 
-.B% s
+.B %s
 Prints a string of characters terminated with a null.
 
-.B% S
+.B %S
 Prints a string of characters and the number in hexadecimal of a special character that is written like this '\ x' according to the ASCII table.
 
 .B %%
-Print a percentage sign
+Print a percentage sign.
 
-.B% d
+.B %d
 Prints a signed decimal number.
 
-.B% i
+.B %i
 Converts an argument to unsigned decimal notation and prints it.
 
-.B% b
+.B %b
 Converts the unsigned integer to binary and prints it.
 
-.B% u
+.B %u
 Prints an unsigned decimal number.
 
-.B% or
+.B %o
 Prints the octal unsigned integer conversion.
 
-.B% x
+.B %x
 Unsigned hex conversion to lowercase.
 
-.B% X
+.B %X
 Unsigned hex conversion to uppercase.
 
-.B% p
+.B %p
 Print a memory address (pointer).
 
-.B% h
+.B %h
 Print the inverted string.
 
-.B% r
+.B %r
 Print the inverted string.
 
-.B% R
+.B %R
 replaces a letter with the thirteenth letter of the alphabet (ROT13).
 
 .SH Flag char
@@ -87,7 +87,7 @@ Justify left.
 int main (empty)
 {
 
-    _printf ("% s", String);
+   _printf ("% s", String);
 
    _printf ("I am a character% s", 'A');
 
@@ -97,12 +97,11 @@ int main (empty)
 
    _printf ("I am a binary% b", 98);
 
-  _printf ("The number is:% 05d", 1560);
+   _printf ("The number is:% 05d", 1560);
 
     return (0);
-
-
 }
+
 .RE
 
 .SH SEE ALSO
