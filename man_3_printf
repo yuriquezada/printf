@@ -12,7 +12,10 @@ _printf (): Take the input to make formatted prints.
 int _printf (const char * format, ...)
 
 .SH DESCRIPTION
-The _printf () function takes one argument: a string of characters to print. This string is made up of characters, each of which is printed exactly as it appears. On the other hand, we have characters that normally print as expected, but when you add a specifier, they become special. The format specifiers are:
+The _printf () function takes one argument: a string of characters to print. 
+This string is made up of characters, each of which is printed exactly as it appears. 
+On the other hand, we have characters that normally print as expected, but when you add a specifier, they become special. 
+The format specifiers are:
 FORMAT generates a specific format relative to the input of the specifier.
 
 .SH Return value
