@@ -1,0 +1,117 @@
+. \ "This is the Holberton student manual page
+. \ "Just because it's printed doesn't mean it's the gospel
+.TH man 3 "23 Jul 2021" "Holberton School 0x11. C - _printf"
+
+.SH NAME
+_printf (): Take the input to make formatted prints.
+
+.SH SYNOPSIS
+#include "holberton.h"
+
+.SH Syntax
+int _printf (const char * format, ...)
+
+.SH DESCRIPTION
+The _printf () function takes one argument: a string of characters to print. 
+This string is made up of characters, each of which is printed exactly as it appears. 
+On the other hand, we have characters that normally print as expected, but when you add a specifier, they become special. 
+The format specifiers are:
+FORMAT generates a specific format relative to the input of the specifier.
+
+.SH Return value
+The _printf () function returns the number of characters printed (excluding the null byte used to finalize the output to strings).
+
+.B %c
+Print a character passed as a parameter.
+
+.B %s
+Prints a string of characters terminated with a null.
+
+.B %S
+Prints a string of characters and the number in hexadecimal of a special character that is written like this '\ x' according to the ASCII table.
+
+.B %%
+Print a percentage sign.
+
+.B %d
+Prints a signed decimal number.
+
+.B %i
+Converts an argument to unsigned decimal notation and prints it.
+
+.B %b
+Converts the unsigned integer to binary and prints it.
+
+.B %u
+Prints an unsigned decimal number.
+
+.B %o
+Prints the octal unsigned integer conversion.
+
+.B %x
+Unsigned hex conversion to lowercase.
+
+.B %X
+Unsigned hex conversion to uppercase.
+
+.B %p
+Print a memory address (pointer).
+
+.B %h
+Print the inverted string.
+
+.B %r
+Print the inverted string.
+
+.B %R
+replaces a letter with the thirteenth letter of the alphabet (ROT13).
+
+.SH Flag char
+.B +
+Print the '+' symbol in front of the positive number occupying one space wide.
+
+.B Space
+Invisible plus sign. A blank space is left before the number occupying a space in the width.
+
+.B #
+Prepend a print of a zero '0' over an octal number.
+
+.B 0
+Fill in zero to the left.
+
+.B -
+Justify left.
+
+.SH EXAMPLE
+
+.RS
+#include "holberton.h"
+
+int main (empty)
+{
+
+   _printf ("% s", String);
+
+   _printf ("I am a character% s", 'A');
+
+   _printf ("I am an integer% s", 12);
+
+   _printf ("I am percentage %%",%);
+
+   _printf ("I am a binary% b", 98);
+
+   _printf ("The number is:% 05d", 1560);
+
+    return (0);
+}
+
+.RE
+
+.SH SEE ALSO
+printf (3)
+
+.SH ERRORS
+No known bugs.
+
+.SH AUTHOR
+Yuri Quezada and Gerandine Meneses
